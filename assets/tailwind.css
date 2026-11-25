@@ -1,0 +1,25 @@
+/* Các quy tắc dự phòng giúp ví dụ hiện đúng khi trình chiếu mà mạng chậm.
+   Khi có mạng, Play CDN hỗ trợ thêm các class mới của Tailwind. */
+@layer utilities {
+  .inline-block { display: inline-block; }
+  .grid { display: grid; }
+  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  @media (min-width: 48rem) { .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .underline { text-decoration-line: underline; }
+  .rounded-lg { border-radius: .5rem; }
+  .border { border: 1px solid #9eb7b3; }
+  .p-2 { padding: .5rem; }
+  .p-8 { padding: 2rem; }
+  .p-4 { padding: 1rem; }
+  .px-3 { padding-inline: .75rem; }
+  .px-4 { padding-inline: 1rem; }
+  .py-2 { padding-block: .5rem; }
+  .text-white { color: #fff; }
+  .bg-blue-50 { background-color: #eff6ff; }
+  .bg-blue-500 { background-color: #2b7fff; }
+  .bg-blue-600 { background-color: #155dfc; }
+  .bg-teal-700 { background-color: #00786f; }
+  .bg-green-600 { background-color: #008236; }
+  .bg-violet-700 { background-color: #7008e7; }
+  @media (hover: hover) { .hover\:bg-blue-800:hover { background-color: #193cb8; } }
+}

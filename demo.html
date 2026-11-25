@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <!-- Đoạn 1. Cấu hình tiếng Việt, khung nhìn, tên tab và nguồn Tailwind CSS. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f5">
+  <title>Demo | Sổ tay Front-end · Tailwind CSS</title>
+  <link rel="stylesheet" href="assets/phong-chu.css">
+  <link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="assets/giao-dien.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <a href="#noi-dung" class="skip">Đến nội dung</a>
+  <!-- Đoạn 2. Menu chính. aria-current đánh dấu trang đang mở. -->
+  <header id="dau-trang" class="masthead">
+    <div class="wrap top-row">
+      <a href="index.html" class="brand" aria-label="Sổ tay Front-end, trang chủ"><span class="book-logo" aria-hidden="true"><i></i><i></i></span>Sổ tay <b>Front-end</b></a>
+      <nav class="menu" aria-label="Menu chính">
+        <a href="index.html">Trang chủ</a>
+        <a href="caidat.html">Cài đặt</a>
+        <a href="sosanh.html">So sánh</a>
+        <a href="demo.html" aria-current="page">Demo</a>
+      </nav>
+      <a class="team-link" href="index.html#thanh-vien">Nhóm thực hiện</a>
+    </div>
+  </header>
+  <main id="noi-dung">
+    <!-- Đoạn 3. Tựa bài và ví dụ minh họa đặc trưng của bài. -->
+    <header class="lesson-cover butter"><div class="wrap lesson-hero">
+      <div><a class="back" href="index.html">Trang chủ</a><h1>Demo thực tế</h1><p class="lead">Thử ba thao tác trên bộ sản phẩm mẫu: thu hẹp cửa sổ, rê chuột và bấm mở mô tả.</p></div>
+      <div aria-hidden="true" class="hero-art lesson-art"><span class="art-window"><i></i><i></i><i></i></span></div>
+    </div></header>
+    <div class="wrap lesson-body">
+      <aside class="toc"><p>Trong bài này</p><nav aria-label="Các phần trong bài">
+          <a href="#san-pham">Sản phẩm mẫu</a>
+          <a href="#thao-tac">Thao tác demo</a>
+      </nav></aside>
+      <div class="reading">
+        <section id="san-pham">
+        <div class="section-head"><h2>Góc văn phòng phẩm</h2></div>
+        <!-- Đoạn 4. grid tạo lưới; mặc định một cột, đến mức md thì ba cột. -->
+        <div class="products grid grid-cols-1 md:grid-cols-3">
+          <!-- Đoạn 5. Bấm summary để mở/đóng details. Hover chỉ đổi màu nền. -->
+          <article class="product">
+            <img class="product-photo" src="assets/so-tay.webp" alt="Sổ tay" width="480" height="365" loading="lazy"><div class="product-body">
+              <h3>Sổ tay</h3><p class="price">35.000 đ</p>
+              <details>
+                <summary class="rounded-lg bg-blue-600 px-3 py-2 text-white hover:bg-blue-800">Xem chi tiết</summary>
+                <p>Khổ A5, 80 trang kẻ ngang.</p>
+              </details>
+            </div>
+          </article>
+          <article class="product">
+            <img class="product-photo" src="assets/but-gel.webp" alt="Bút gel" width="480" height="365" loading="lazy"><div class="product-body">
+              <h3>Bút gel</h3><p class="price">12.000 đ</p>
+              <details>
+                <summary class="rounded-lg bg-blue-600 px-3 py-2 text-white hover:bg-blue-800">Xem chi tiết</summary>
+                <p>Mực xanh, ngòi 0,5 mm.</p>
+              </details>
+            </div>
+          </article>
+          <article class="product">
+            <img class="product-photo" src="assets/but-danh-dau.webp" alt="Bút đánh dấu" width="480" height="365" loading="lazy"><div class="product-body">
+              <h3>Bút đánh dấu</h3><p class="price">18.000 đ</p>
+              <details>
+                <summary class="rounded-lg bg-blue-600 px-3 py-2 text-white hover:bg-blue-800">Xem chi tiết</summary>
+                <p>Đầu vát, màu vàng nhạt.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+        <!-- Đoạn 6. Ba thao tác để thuyết trình. -->
+        <section class="panel lesson" id="thao-tac">
+        <h2>Từ thao tác đến dòng code</h2>
+        <dl class="gloss">
+          <div><dt><strong>Thu hẹp</strong></dt><dd><code>grid-cols-1 md:grid-cols-3</code> xếp một cột trên khung hẹp và ba cột từ mức md.</dd></div>
+          <div><dt><strong>Rê chuột</strong></dt><dd><code>hover:bg-blue-800</code> đổi nền nút thành xanh đậm khi con trỏ ở trên nút.</dd></div>
+          <div><dt><strong>Bấm mở</strong></dt><dd><code>&lt;details&gt;</code> và <code>&lt;summary&gt;</code> của HTML cho phép mở hoặc đóng mô tả.</dd></div>
+        </dl>
+        <p class="edit-tip">Trong VS Code, thử đổi <code>bg-blue-600</code> ở nút Sổ tay thành <code>bg-green-600</code>. Lưu, tải lại và đưa chuột ra ngoài nút để thấy màu nền mới.</p>
+      </section>
+        <a class="next-lesson" href="index.html">Về Trang chủ</a>
+      </div>
+    </div>
+  </main>
+  <!-- Đoạn 7. Chân trang và liên kết về đầu trang. -->
+  <footer class="footer"><div class="wrap"><span>Sổ tay Front-end <span class="foot-dot">·</span> Tailwind CSS</span><a href="#dau-trang">Về đầu trang</a></div></footer>
+</body>
+</html>

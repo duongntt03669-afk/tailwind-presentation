@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <!-- Đoạn 1. Cấu hình tiếng Việt, khung nhìn, tên tab và nguồn Tailwind CSS. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f5">
+  <title>Cài đặt | Sổ tay Front-end · Tailwind CSS</title>
+  <link rel="stylesheet" href="assets/phong-chu.css">
+  <link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="assets/giao-dien.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <a href="#noi-dung" class="skip">Đến nội dung</a>
+  <!-- Đoạn 2. Menu chính. aria-current đánh dấu trang đang mở. -->
+  <header id="dau-trang" class="masthead">
+    <div class="wrap top-row">
+      <a href="index.html" class="brand" aria-label="Sổ tay Front-end, trang chủ"><span class="book-logo" aria-hidden="true"><i></i><i></i></span>Sổ tay <b>Front-end</b></a>
+      <nav class="menu" aria-label="Menu chính">
+        <a href="index.html">Trang chủ</a>
+        <a href="caidat.html" aria-current="page">Cài đặt</a>
+        <a href="sosanh.html">So sánh</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+      <a class="team-link" href="index.html#thanh-vien">Nhóm thực hiện</a>
+    </div>
+  </header>
+  <main id="noi-dung">
+    <!-- Đoạn 3. Tựa bài và ví dụ minh họa đặc trưng của bài. -->
+    <header class="lesson-cover lilac"><div class="wrap lesson-hero">
+      <div><a class="back" href="index.html">Trang chủ</a><h1>Cài đặt &amp; cú pháp</h1><p class="lead">Thêm Tailwind vào HTML và đọc tên class qua hai ô cùng ghi “Xin chào”.</p></div>
+      <div aria-hidden="true" class="hero-art lesson-art"><span class="art-code"><i></i><i></i><i></i><b>&lt;/&gt;</b></span></div>
+    </div></header>
+    <div class="wrap lesson-body">
+      <aside class="toc"><p>Trong bài này</p><nav aria-label="Các phần trong bài">
+          <a href="#nhung-tailwind">Nhúng Tailwind</a>
+          <a href="#khoang-dem">Khoảng đệm</a>
+          <a href="#ten-class">Đọc tên class</a>
+      </nav></aside>
+      <div class="reading">
+        <!-- Đoạn 4. Dòng script chạy ở head. Dòng trong pre chỉ là ví dụ để đọc. -->
+        <section class="panel" id="nhung-tailwind">
+        <h2>Nhúng Tailwind vào file HTML</h2>
+        <ol class="steps">
+          <li>Mở file HTML trong VS Code và tìm thẻ <code>&lt;head&gt;</code>.</li>
+          <li>Đặt dòng sau vào trong thẻ đó. Các trang của nhóm đã có sẵn dòng này.</li>
+          <li>Lưu file, kết nối Internet rồi mở file bằng trình duyệt để dùng Play CDN.</li>
+        </ol>
+        <pre class="codebox"><code>&lt;script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"&gt;&lt;/script&gt;</code></pre>
+      </section>
+        <!-- Đoạn 5. Chỉ khác nhau ở p-2 và p-8. figure đi cùng nhãn figcaption. -->
+        <section class="panel" id="khoang-dem">
+        <h2>Nhìn thấy khoảng đệm</h2>
+        <p>Đọc khoảng cách từ chữ đến đường viền. Ô thứ hai dùng mức đệm lớn hơn ở cả bốn phía.</p>
+        <div class="pair">
+          <figure><div class="rounded-lg border bg-blue-50 p-2">Xin chào</div><figcaption><code>p-2</code></figcaption></figure>
+          <figure><div class="rounded-lg border bg-blue-50 p-8">Xin chào</div><figcaption><code>p-8</code></figcaption></figure>
+        </div>
+      </section>
+        <!-- Đoạn 6. Mỗi dt là tên class, mỗi dd giải nghĩa class đó. -->
+        <section class="panel" id="ten-class">
+        <h2>Đọc tên class</h2>
+        <dl class="gloss">
+          <div><dt><code>bg-blue-500</code></dt><dd><strong>bg</strong> là nền, <strong>blue</strong> là xanh dương, <strong>500</strong> là mức sắc độ.</dd></div>
+          <div><dt><code>p-4</code></dt><dd><strong>p</strong> là padding, tức khoảng đệm phía trong. Số 4 là mức trên thang khoảng cách của Tailwind.</dd></div>
+          <div><dt><code>rounded-lg</code></dt><dd>Bo góc phần tử. <strong>lg</strong> chỉ mức bo lớn.</dd></div>
+        </dl>
+      </section>
+        <a class="next-lesson" href="sosanh.html">Bài tiếp theo · So sánh</a>
+      </div>
+    </div>
+  </main>
+  <!-- Đoạn 7. Chân trang và liên kết về đầu trang. -->
+  <footer class="footer"><div class="wrap"><span>Sổ tay Front-end <span class="foot-dot">·</span> Tailwind CSS</span><a href="#dau-trang">Về đầu trang</a></div></footer>
+</body>
+</html>

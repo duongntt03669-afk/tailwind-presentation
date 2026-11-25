@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <!-- Đoạn 1. Cấu hình tiếng Việt, khung nhìn, tên tab và nguồn Tailwind CSS. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f5">
+  <title>So sánh | Sổ tay Front-end · Tailwind CSS</title>
+  <link rel="stylesheet" href="assets/phong-chu.css">
+  <link rel="stylesheet" href="assets/tailwind.css">
+  <link rel="stylesheet" href="assets/giao-dien.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <a href="#noi-dung" class="skip">Đến nội dung</a>
+  <!-- Đoạn 2. Menu chính. aria-current đánh dấu trang đang mở. -->
+  <header id="dau-trang" class="masthead">
+    <div class="wrap top-row">
+      <a href="index.html" class="brand" aria-label="Sổ tay Front-end, trang chủ"><span class="book-logo" aria-hidden="true"><i></i><i></i></span>Sổ tay <b>Front-end</b></a>
+      <nav class="menu" aria-label="Menu chính">
+        <a href="index.html">Trang chủ</a>
+        <a href="caidat.html">Cài đặt</a>
+        <a href="sosanh.html" aria-current="page">So sánh</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+      <a class="team-link" href="index.html#thanh-vien">Nhóm thực hiện</a>
+    </div>
+  </header>
+  <main id="noi-dung">
+    <!-- Đoạn 3. Tựa bài và ví dụ minh họa đặc trưng của bài. -->
+    <header class="lesson-cover sage"><div class="wrap lesson-hero">
+      <div><a class="back" href="index.html">Trang chủ</a><h1>So sánh &amp; đánh giá</h1><p class="lead">Nếu cùng tạo một nút màu xanh, CSS thuần, Bootstrap và Tailwind khác nhau ở phần code nào?</p></div>
+      <div aria-hidden="true" class="hero-art lesson-art"><span class="art-layers"><i></i><i></i><i></i></span></div>
+    </div></header>
+    <div class="wrap lesson-body">
+      <aside class="toc"><p>Trong bài này</p><nav aria-label="Các phần trong bài">
+          <a href="#bang-so-sanh">Bảng so sánh</a>
+          <a href="#vi-du-code">Ví dụ code</a>
+          <a href="#ket-luan">Kết luận</a>
+      </nav></aside>
+      <div class="reading">
+        <!-- Đoạn 4. table tạo bảng, tr tạo hàng, th là tiêu đề và td là ô dữ liệu. -->
+        <section class="panel" id="bang-so-sanh">
+        <h2>Ba cách làm một nút</h2>
+        <div class="table-scroll"><table>
+          <caption>Cách tạo kiểu và tình huống phù hợp</caption>
+          <thead><tr><th scope="col">Công cụ</th><th scope="col">Cách làm</th><th scope="col">Khi nào phù hợp?</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">CSS thuần</th><td>Tự đặt tên class và viết từng thuộc tính.</td><td>Khi muốn tự định nghĩa các quy tắc giao diện.</td></tr>
+            <tr><th scope="row">Bootstrap</th><td>Dùng kiểu nút có sẵn rồi tùy chỉnh.</td><td>Khi cần dựng nhanh bằng các thành phần quen thuộc.</td></tr>
+            <tr><th scope="row">Tailwind CSS</th><td>Ghép class cho nền, chữ và khoảng đệm.</td><td>Khi muốn chọn từng chi tiết theo thiết kế riêng.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+        <!-- Đoạn 5. code hiển thị ví dụ viết cho ba công cụ. -->
+        <section class="panel" id="vi-du-code">
+        <h2>Cùng đọc code</h2>
+        <div class="reference"><h3>CSS thuần</h3><code>.nut-xanh { background-color: blue; color: white; }</code></div>
+        <div class="reference"><h3>Bootstrap</h3><code>class="btn btn-primary"</code><p class="muted">Hai class chọn mẫu nút chính sau khi đã nhúng Bootstrap.</p></div>
+        <div class="reference"><h3>Tailwind CSS</h3><code>class="bg-blue-600 text-white"</code><p class="muted">Hai class lần lượt đặt màu nền và màu chữ.</p></div>
+      </section>
+        <!-- Đoạn 6. Kết luận nối với một ví dụ thật trên trang chủ. -->
+        <section class="note good" id="ket-luan"><h2>Vì sao nhóm chọn Tailwind?</h2><p>Nhóm muốn tự chọn màu nền, khoảng đệm và góc bo của liên kết “Học cách cài đặt”. Mỗi đặc điểm đó có một class riêng, nên khi đổi màu, nhóm vẫn giữ được kích thước nút.</p></section>
+        <a class="next-lesson" href="demo.html">Bài tiếp theo · Demo</a>
+      </div>
+    </div>
+  </main>
+  <!-- Đoạn 7. Chân trang và liên kết về đầu trang. -->
+  <footer class="footer"><div class="wrap"><span>Sổ tay Front-end <span class="foot-dot">·</span> Tailwind CSS</span><a href="#dau-trang">Về đầu trang</a></div></footer>
+</body>
+</html>
